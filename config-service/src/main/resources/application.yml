@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+         uri: https://github.com/rmitula/spring-boot-microservices
+         searchPaths: global-configuration
+server:
+  port: 8888
