@@ -17,9 +17,10 @@ public class ProductController {
         this.productProperties = productProperties;
     }
 
-    @GetMapping
+    @GetMapping("greeting")
     public String greeting() {
         LOG.info(productProperties.getGreeting());
         return productProperties.getGreeting();
     }
+    
 }
