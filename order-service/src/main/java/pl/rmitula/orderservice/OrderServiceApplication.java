@@ -12,15 +12,15 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 public class OrderServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OrderServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(OrderServiceApplication.class, args);
+    }
 
-	@Configuration
-	static class MyConfig {
-		@Bean
-		public RestTemplate rest() {
-			return new RestTemplateBuilder().build();
-		}
-	}
+    @Configuration
+    static class MyConfig {
+        @Bean
+        public RestTemplate rest() {
+            return new RestTemplateBuilder().build();
+        }
+    }
 }

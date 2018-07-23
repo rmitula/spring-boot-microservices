@@ -11,7 +11,7 @@ import pl.rmitula.productservice.properties.ProductProperties;
 @EnableConfigurationProperties(ProductProperties.class)
 public class ProductServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProductServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ProductServiceApplication.class, args);
+    }
 }

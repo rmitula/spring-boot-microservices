@@ -11,7 +11,7 @@ import pl.rmitula.customerservice.properties.CustomerProperties;
 @EnableConfigurationProperties(CustomerProperties.class)
 public class CustomerServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CustomerServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CustomerServiceApplication.class, args);
+    }
 }
