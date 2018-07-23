@@ -25,4 +25,9 @@ services:
   order-service:
     build: order-service
     ports:
+      - 8090:8090
+
+  gateway-service:
+    build: gateway-service
+    ports:
       - 8080:8080
