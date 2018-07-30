@@ -1,24 +1,24 @@
 package pl.rmitula.productservice.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-@Entity
+@Document(collection = "products")
+@Data
 @Getter
 @Setter
-@NoArgsConstructor
+@AllArgsConstructor
 public class Product implements Serializable {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    private String id;
 
     @NotNull
     private String name;

@@ -2,10 +2,13 @@ package pl.rmitula.productservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import pl.rmitula.productservice.model.Product;
 import pl.rmitula.productservice.properties.ProductProperties;
 import pl.rmitula.productservice.service.ProductService;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -30,12 +33,17 @@ public class ProductController {
         return productProperties.getGreeting();
     }
 
-    //-----------
-
     @GetMapping
-    public List<Product> getAll() {
-        LOG.info("displaying list of products.");
+    public Flux<Product> getAll() {
+        LOG.info("return list of products");
         return productService.getAll();
     }
+
+    @GetMapping("{id}")
+    public Mono<Product> getOne(@PathVariable String id) {
+        LOG.info("return product with id: " + id);
+        return productService.getOne(id);
+    }
+
 
 }

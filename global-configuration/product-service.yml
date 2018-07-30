@@ -12,8 +12,9 @@ eureka:
     leaseRenewalIntervalInSeconds: 5
     preferIpAddress: true
 
+# //TODO: Use docker for MongoDB
 spring:
   data.mongodb:
     host: localhost
     port: 27017
-    database: test2
+    database: ms
