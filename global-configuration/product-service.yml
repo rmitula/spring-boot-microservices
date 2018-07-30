@@ -11,3 +11,9 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     preferIpAddress: true
+
+spring:
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: test2
