@@ -24,4 +24,12 @@ public class ProductService {
     public Mono<Product> getOne(String id) {
         return productRepository.findById(id);
     }
+
+    public Mono<Product> save(Product product) {
+        return productRepository.save(product);
+    }
+
+    public void delete(String id) {
+        productRepository.deleteById(id).subscribe();
+    }
 }
